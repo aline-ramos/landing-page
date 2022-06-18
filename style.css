@@ -1,9 +1,11 @@
 /* importação Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-*{
+
+* {
     margin: 0;
     border: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -19,16 +21,15 @@ body {
     bottom: 10px;
 }
 
-/* smartphone Portrait */
-
-/* Cabeçalho*/
-header {
-    height: 60px;
+header .Container {
+    margin: 0 auto;
 }
 
-/* Layout*/
-.Container {
-    margin: 0 auto;
+.header__img {
+    height: 48px;
+    width: 48px;
+    margin-top: 0.8rem;
+    margin-left: 10px;
 }
 
 .Flex {
@@ -36,18 +37,14 @@ header {
     justify-content: space-between;
 }
 
-#logo img {
-    width: 48px;
-    height: 48px;
-}
-
 #checkbox {
     display: none;
 }
 
-label {
+.header__label {
     font-size: 3em;
     padding-right: 15px;
+    width: 48px;
 }
 
 nav ul {
@@ -61,13 +58,13 @@ nav ul {
     transition: all 0.5s;
 }
 
-#checkbox:checked ~ ul {
+#checkbox:checked~ul {
     right: 0;
 }
 
 nav ul li {
     padding: 20px;
-   border-bottom: 1px solid #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
 }
 
 nav ul li a {
@@ -75,27 +72,75 @@ nav ul li a {
     color: #FFF;
 }
 
-/* Destaque*/
 main {
     height: 75vh;
     background-image: url(./img/banner320);
+    color: #FFF;
 }
 
+main .Container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 16px;
+}
 
-/* smartphone Landscape */
+.main__title {
+    font-size: 30px;
+    font-family: Graphik-Medium, Graphik-Regular, "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 0 16px;
+}
+
+.main__text {
+    font-size: 20px;
+    font-family: Graphik-Medium, Graphik-Regular, "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 60px;
+}
+
+.main__form {
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.main__description {
+    font-family: Graphik-Medium, Graphik-Regular, "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 0 32px;
+    font-size: 1.25rem;
+}
+
+.border-bottom {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn.btn-secondary.btn-lg {
+    margin-top: 10px;
+    width: 100%;
+}
 
 @media (min-width: 576px) {
-    /* Layout*/
+
     .Container {
         max-width: 540px;
     }
+
+    main {
+        height: 75vh;
+        background-image: url(./img/banner320);
+        background-size: cover;
+    }
+
+    .main__form {
+        max-width: 20.625rem;
+    }
 }
 
-/* tablet Portrait */
-
 @media (min-width: 768px) {
-     /* Layout*/
-     .Container {
+    .Container {
         max-width: 720px;
     }
 
@@ -105,63 +150,47 @@ main {
     }
 }
 
-
-/* tablet Landscape */
-
 @media (min-width: 992px) {
-     /* Layout*/
-     .Container {
+    .Container {
         max-width: 960px;
     }
 }
 
-/* PC */
-
 @media (min-width: 1200px) {
-     /* Layout*/
-     .Container {
+    .Container {
         max-width: 1140px;
     }
 
-      /*Cabeçalho*/
-      header {
-          height: 120px;
-      }
+    header {
+        height: 80px;
+    }
 
-      #logo img {
-          width: 189px;
-          height: 189px;
-          margin-top: 30px;
-      }
+    .header__label {
+        display: none;
+    }
 
-      label {
-          display: none;
-      }
+    .header__nav .header__menu {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 0.5rem;
+    }
 
-      nav ul {
-          position: static;
-          height: auto;
-          background-color: transparent;
-          margin-top: 50px;
-      }
+    nav ul li {
+        float: left;
+        border: 0;
+    }
 
-      nav ul li {
-          float: left;
-          border: 0;
-      }
+    nav ul li a {
+        color: #343538;
+    }
 
-      nav ul li a {
-          color: #343538;
-      }
+    nav ul li a:hover {
+        color: #c00000;
+    }
 
-      nav ul li a:hover {
-          color: #c00000;
-      }
-
-      main {
+    main {
         height: 75vh;
         background-image: url(./img/banner1440);
     }
 }
-
-
